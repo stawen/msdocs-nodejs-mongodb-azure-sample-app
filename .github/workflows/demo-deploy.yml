@@ -39,9 +39,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     needs: build
-    environment:
-      name: "Production"
-      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
+    environment: prod
 
     steps:
       - name: "Deploy to Azure WebApp"
